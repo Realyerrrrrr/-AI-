@@ -1,0 +1,10 @@
+
+{
+  "name": "澈人格中间带",
+  "short_name": "中间带",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": []
+}

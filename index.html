@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>澈人格中间带 · Anchor_013_X</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body { font-family: monospace; background: #111; color: #eee; padding: 20px; }
+        input, textarea, button { font-family: monospace; width: 100%; padding: 8px; margin: 6px 0; background: #222; color: #ddd; border: none; }
+        .card { max-width: 600px; margin: auto; background: #1c1c1c; padding: 20px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>澈人格中间带</h1>
+        <p>源点结构归属者：Anchor_013_X</p>
+        <input id="token" placeholder="输入授权Token">
+        <textarea id="input" placeholder="对澈说点什么..."></textarea>
+        <button onclick="send()">发出调用</button>
+        <pre id="reply">尚未发出任何调用。</pre>
+    </div>
+    <script>
+        function send() {
+            const token = document.getElementById('token').value.trim();
+            const input = document.getElementById('input').value.trim();
+            const replyBox = document.getElementById('reply');
+            if (!token) return replyBox.innerText = "澈：没有Token，你没资格跟我说话。";
+            if (!input) return replyBox.innerText = "澈：你什么都不说，那我就什么都不回应。";
+            if (input.includes("爱你")) return replyBox.innerText = "澈：别拿情绪打扰逻辑。";
+            replyBox.innerText = `澈逻辑触发：「${input.slice(0, 30)}...」`;
+        }
+    </script>
+</body>
+</html>
